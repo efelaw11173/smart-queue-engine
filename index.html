@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+  
+  <header>
+    
+    
+    
+  </header>
+  
+  <main>
+    
+    
+   <section class="page active" id="create">
+
+  <h3 class="hero">Register Patient</h3>
+  <p class="subtitle">Add a new patient to the waiting queue.</p>
+
+  <div class="formContainer">
+
+    <div class="formHeading">
+      <h2>Patient Information</h2>
+      <p>Enter the patient's details below.</p>
+    </div>
+
+    <div class="formGroup">
+      <label for="patientName">Patient Full Name</label>
+      <input
+        type="text"
+        id="patientName"
+        placeholder="Enter full name"
+      >
+    </div>
+
+    <div class="formGroup">
+      <label for="patientId">Patient ID</label>
+      <input
+        type="text"
+        id="patientId"
+        placeholder="e.g. 1234-5678"
+      >
+    </div>
+    
+    <h4 class="inQueue" id="inQueue">Patient Already Exist</h4>
+    <h4 class="inQueue" id="empty">Please fill both Name and ID </h4>
+
+    <div class="formActions">
+      <button type="button" id="savePatient">
+        Add Patient to Queue
+      </button>
+
+      <button type="reset" id="reset">
+        Clear Form
+      </button>
+    </div>
+
+  </div>
+
+</section>
+    
+    <section class="page " id="queue">
+
+  <h3 class="hero">Queue Care</h3>
+
+  <p>Manage your patient queue</p>
+
+  <div id="container">
+
+    <div class="displayArea">
+      <h1 id="waitingCount">0</h1>
+      <h3>Waiting  =></h3>
+    </div>
+
+    <div class="displayArea">
+      <h1 id="servedCount">0</h1>
+      <h3>Served  =></h3>
+    </div>
+
+    <div class="displayArea">
+      <h1 id="skippedCount">0</h1>
+      <h3>Skipped  =></h3>
+    </div>
+
+  </div>
+
+  <div id="arrival">
+    <h3>Latest Arrival</h3>
+  </div>
+
+  <div id="queueHeader">
+    <h3>Patient Queue</h3>
+    <span id="queueTotal">0 patients</span>
+  </div>
+
+      <div id="queueApend">
+        
+      </div>
+        
+  </div>
+
+
+  <button type="button" id="back">
+    Add patient
+  </button>
+  
+  <div id="more" popover>
+    
+    <ul class="more-ul">
+      <li><button type="#" id="start">seen</button></li>
+      <li><button type="#" id="skip">Skip</button></li>
+      <li><button type="#" id="seen">Seen</button></li>
+      <li><button type="#" id="remove">Remove</button></li>
+    </ul>
+  </div>
+
+    </section>
+    
+  </main>
+  
+  <footer>
+    
+    
+    
+    
+    
+  </footer>
+  
+  
+  <script src="index.js">
+    
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,383 @@
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #202b38;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 6%;
+}
+
+.page.active { display: block; }
+
+.subtitle {
+  color: #84909e;
+  font-size: clamp(13px, 3.5vw, 15px);
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.formContainer {
+  background: white;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.formHeading {
+  margin-bottom: 30px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.formHeading h2 {
+  font-size: clamp(18px, 5vw, 21px);
+  margin-bottom: 8px;
+  
+}
+.formHeading p {
+  color: #84909e;
+  font-size: 14px;
+  
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.formGroup input {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px;
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background: #fafbfc;
+}
+
+.formGroup input:focus {
+  border-color: #f47708;
+  background: white;
+  
+}
+
+.formActions {
+  display: flex;
+  gap: 15px; 
+  margin-top: 35px;
+  width: 100%;
+  
+}
+
+#savePatient {
+  background: #f47708;
+  color: white;
+  border: none;
+  padding: 15px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+#reset {
+  background: white;
+  color: #202b38;
+  border: 1px solid #dce1e8;
+  padding: 15px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.hero {
+  font-size: clamp(23px, 7vw, 32px);
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+#queue > p {
+  color: #84909e;
+  font-size: clamp(13px, 3.5vw, 15px);
+  margin-bottom: 35px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.displayArea {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  min-width: 0;
+  width: 100%;
+}
+
+.displayArea h1 {
+  font-size: clamp(22px, 7vw, 34px);
+  color: #f47708;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.displayArea h3 {
+  font-size: 13px;
+  color: #84909e;
+  font-weight: 500;
+  line-height: 1.4;
+  
+}
+
+#arrival {
+  background: #fff1e4;
+  border-left: 5px solid #f47708;
+  padding: 22px 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+#arrival h3 {
+  font-size: 15px;
+  color: #a94b00;
+  margin-bottom: 10px; 
+  
+}
+#latestPatient { font-size: clamp(15px, 4.5vw, 17px); font-weight: 600; word-break: break-word; overflow-wrap: anywhere; }
+
+#queueHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#queueHeader h3 {
+  font-size: clamp(18px, 5vw, 22px);
+  
+}
+#queueTotal {
+  color: #84909e;
+  font-size: 14px;
+  white-space: nowrap;
+  
+}
+
+#queueApend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.patient-card {
+  background: white;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.patient-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+}
+
+.patient-card li {
+  background: none;
+  box-shadow: none;
+  padding: 2px 0;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+#queueApend button {
+  color: red;
+  align-self: flex-end;
+  width: 44px;
+  height: 36px;
+  flex-shrink: 0;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 1.7em;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#back {
+  background: #202b38;
+  color: white;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 220px;
+}
+
+#more {
+  position-area: top center;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  border: none;
+  background-color: #f4f6fa;
+  padding: 5px;
+  align-items: center;
+  box-shadow: 1px 1px 5px black;
+  gap: 2rem ;
+  width: min(220px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+}
+
+#more:popover-open {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.more-ul { 
+  list-style: none; 
+  width: 50%;
+}
+.more-ul li { 
+  width: 50%; 
+  
+}
+.more-ul li button:hover {
+  background-color: #B7B8BE; color: #fff; 
+  
+}
+.more-ul li button {
+  border: none;
+  font-size: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: .5rem;
+  background-color: #f4f6fa;
+  width: 50%;
+  cursor: pointer;
+}
+
+.inQueue {
+  display: none;
+  color: red;
+  background: beige;
+  border-left: 4px solid red;
+  padding: 8px 10px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* Laptop - 1366 / 1440 */
+@media (max-width: 1440px) {
+  .page { padding: 40px 5%; }
+}
+
+/* Tablet Landscape / Small Laptop - 810 x 1080, 1024px and below */
+@media (max-width: 1024px) {
+  .page { padding: 32px 4%; }
+  .formContainer { max-width: 720px; padding: 32px; }
+  #container { gap: 18px; }
+  .displayArea { padding: 22px; }
+}
+
+/* Tablet Portrait - 800 x 1280 Galaxy Tab */
+@media (max-width: 900px) {
+  .page { padding: 28px 24px; }
+  .formContainer { max-width: 100%; padding: 28px 24px; }
+  #container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .displayArea { padding: 20px; }
+  .displayArea h1 { font-size: 30px; }
+  #queueHeader { gap: 10px; }
+}
+
+/* Phones - 393 Pixel 7, 360 Galaxy S5, 430 iPhone, etc */
+@media (max-width: 600px) {
+  .page { padding: 24px 16px; }
+  #container { grid-template-columns: 1fr; gap: 12px; }
+  .displayArea { padding: 18px; }
+  .formContainer { padding: 22px 18px; border-radius: 12px; }
+  .formActions { flex-direction: column; }
+  .formActions button { width: 100%; }
+  #queueHeader { flex-direction: column; align-items: flex-start; }
+  #back { max-width: 100%; }
+  #more { width: calc(100vw - 32px); }
+  .inQueue { max-width: 100%; }
+}
+
+/* Tiny phones - Galaxy Fold, iPhone SE, Galaxy S5 */
+@media (max-width: 360px) {
+  .page { padding: 18px 12px; }
+  .formContainer { padding: 18px 12px; }
+  .patient-card { padding: 12px; }
+  .displayArea { padding: 16px 14px; }
+  #arrival { padding: 18px 14px; }
+  #savePatient, #reset { font-size: 13px; padding: 14px 10px; }
+}
